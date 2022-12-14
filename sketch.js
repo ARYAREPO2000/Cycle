@@ -36,16 +36,16 @@ function preload(){
 
 function setup(){
   
-createCanvas(1200,300);
+createCanvas(2400,600);
 // Moving background
-path=createSprite(100,150);
+path=createSprite(200,300);
 path.addImage(pathImg);
 path.velocityX = -5;
 
 //creating boy running
-mainCyclist  = createSprite(70,150);
+mainCyclist  = createSprite(140,300);
 mainCyclist.addAnimation("SahilRunning",mainRacerImg1);
-mainCyclist.scale=0.07;
+mainCyclist.scale=0.14;
   
 //set collider for mainCyclist
 
@@ -55,9 +55,9 @@ mainCyclist.setCollider("rectangle",0,0,40,40);
 //mainCyclist.setCollider("rectangle",0,0,40,40,50);
 
   
-gameOver = createSprite(650,150);
+gameOver = createSprite(3200,300);
 gameOver.addImage(gameOverImg);
-gameOver.scale = 0.8;
+gameOver.scale = 1.6;
 gameOver.visible = false;  
   
 pinkCG = new Group();
@@ -165,7 +165,7 @@ function draw() {
 
 function pinkCyclists(){
         player1 =createSprite(1100,Math.round(random(50, 250)));
-        player1.scale =0.06;
+        player1.scale =0.12;
         player1.velocityX = -(6 + 2*distance/150);
         player1.addAnimation("opponentPlayer1",oppPink1Img);
         player1.setLifetime=170;
@@ -174,7 +174,7 @@ function pinkCyclists(){
 
 function yellowCyclists(){
         player2 =createSprite(1100,Math.round(random(50, 250)));
-        player2.scale =0.06;
+        player2.scale =0.12;
         player2.velocityX = -(6 + 2*distance/150);
         player2.addAnimation("opponentPlayer2",oppYellow1Img);
         player2.setLifetime=170;
@@ -183,7 +183,7 @@ function yellowCyclists(){
 
 function redCyclists(){
         player3 =createSprite(1100,Math.round(random(50, 250)));
-        player3.scale =0.06;
+        player3.scale =0.12;
         player3.velocityX = -(6 + 2*distance/150);
         player3.addAnimation("opponentPlayer3",oppRed1Img);
         player3.setLifetime=170;
